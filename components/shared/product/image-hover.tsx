@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const ImageHover = ({
   src,
@@ -12,13 +12,16 @@ const ImageHover = ({
   alt: string;
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-  let hoverTimeout: any;
+  const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null); // ✅ Use useRef
+
   const handleMouseEnter = () => {
-    hoverTimeout = setTimeout(() => setIsHovered(true), 1000); // 1 second delay
+    hoverTimeout.current = setTimeout(() => setIsHovered(true), 1000); // ✅ Store timeout in ref
   };
 
   const handleMouseLeave = () => {
-    clearTimeout(hoverTimeout);
+    if (hoverTimeout.current) {
+      clearTimeout(hoverTimeout.current); // ✅ Clear timeout safely
+    }
     setIsHovered(false);
   };
 
