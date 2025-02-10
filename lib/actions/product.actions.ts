@@ -1,7 +1,7 @@
 "use server";
 
 import { connectToDatabase } from "@/lib/db";
-import Product from "@/lib/db/models/product.model";
+import Product, { IProduct } from "@/lib/db/models/product.model";
 
 export async function getAllCategories() {
   await connectToDatabase();
