@@ -712,35 +712,43 @@ const data: Data = {
   headerMenus: [
     {
       name: "Today's Deal",
-      href: "/search?tag=todays-deal",
+      // href: "/search?tag=todays-deal",
+      href: "",
     },
     {
       name: "New Arrivals",
-      href: "/search?tag=new-arrival",
+      // href: "/search?tag=new-arrival",
+      href: "",
     },
     {
       name: "Featured Products",
-      href: "/search?tag=featured",
+      // href: "/search?tag=featured",
+      href: "",
     },
     {
       name: "Best Sellers",
-      href: "/search?tag=best-seller",
+      // href: "/search?tag=best-seller",
+      href: "",
     },
     {
       name: "Browsing History",
-      href: "/#browsing-history",
+      // href: "/#browsing-history",
+      href: "",
     },
     {
       name: "Customer Service",
-      href: "/page/customer-service",
+      // href: "/page/customer-service",
+      href: "",
     },
     {
       name: "About Us",
-      href: "/page/about-us",
+      // href: "/page/about-us",
+      href: "",
     },
     {
       name: "Help",
-      href: "/page/help",
+      // href: "/page/help",
+      href: "",
     },
   ],
 
